@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Validación Facial</title>
+    <style>
+        :root {
+            --primary: #0b5cff;
+            --primary-dark: #0842b3;
+            --secondary: #6b7280;
+            --light: #f6f8fb;
+            --lighter: #ffffff;
+            --danger: #ef4444;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --border: #e5e7eb;
+            --shadow: rgba(16, 24, 40, 0.08);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+        
+        body {
+            background: var(--light);
+            color: #0b1022;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: var(--lighter);
+            border-radius: 16px;
+            box-shadow: 0 4px 12px var(--shadow);
+        }
+        
+        h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+        
+        .description {
+            color: var(--secondary);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .app-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .app-embed {
+            width: 100%;
+            height: 800px;
+            border: none;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px var(--shadow);
+            background: var(--lighter);
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .feature-card {
+            background: var(--lighter);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px var(--shadow);
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-card h3 {
+            color: var(--primary);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .feature-icon {
+            font-size: 24px;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: var(--secondary);
+            font-size: 14px;
+        }
+        
+        .instructions {
+            background: var(--lighter);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px var(--shadow);
+            margin-bottom: 20px;
+        }
+        
+        .instructions h2 {
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        .step {
+            display: flex;
+            margin-bottom: 15px;
+            align-items: flex-start;
+            gap: 15px;
+        }
+        
+        .step-number {
+            background: var(--primary);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-weight: bold;
+        }
+        
+        @media (max-width: 768px) {
+            .features {
+                grid-template-columns: 1fr;
+            }
+            
+            .app-embed {
+                height: 600px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Sistema de Validación Facial</h1>
+            <p class="description">Sistema integral para el registro de asistencia mediante reconocimiento facial. Verifica la identidad de colaboradores y registra sus horarios de entrada y salida automáticamente.</p>
+        </header>
+        
+        <div class="instructions">
+            <h2>¿Cómo utilizar el sistema?</h2>
+            <div class="step">
+                <div class="step-number">1</div>
+                <div>Selecciona un colaborador del listado desplegable. Si no está registrado, haz clic en "Registrar persona".</div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div>Permite el acceso a tu cámara cuando se solicite y toma una foto con el botón "Tomar foto".</div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div>Selecciona la ubicación (oficina o casa) y el tipo de registro (entrada o salida).</div>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <div>Haz clic en "Validar & Registrar" para completar el proceso. El sistema verificará tu identidad y registrará la asistencia.</div>
+            </div>
+        </div>
+        
+        <div class="app-container">
+            <iframe class="app-embed" src="https://script.google.com/macros/s/AKfycbxO_m7krY1-OI0hLXT_4On6Ijz4qL-Rwt4x72xUH1czjT523oYFOC55VgC6CuHGKXQ/exec"></iframe>
+        </div>
+        
+        <div class="features">
+            <div class="feature-card">
+                <h3><span class="feature-icon">🔐</span> Validación Segura</h3>
+                <p>Nuestro sistema utiliza tecnología de reconocimiento facial avanzada para garantizar la identidad de los colaboradores con un alto nivel de precisión.</p>
+            </div>
+            <div class="feature-card">
+                <h3><span class="feature-icon">📊</span> Registro Precise</h3>
+                <p>Registra automáticamente las horas de entrada y salida, diferenciando entre ubicaciones en oficina o trabajo desde casa.</p>
+            </div>
+            <div class="feature-card">
+                <h3><span class="feature-icon">📱</span> Interfaz Intuitiva</h3>
+                <p>Diseño responsive y fácil de usar que funciona perfectamente en dispositivos de escritorio y móviles.</p>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Sistema de Validación Facial &copy; 2023 | Todos los derechos reservados</p>
+        </footer>
+    </div>
+
+    <script>
+        // JavaScript para mejorar la experiencia de usuario
+        document.addEventListener('DOMContentLoaded', function() {
+            // Añadir un loader mientras carga la aplicación
+            const appEmbed = document.querySelector('.app-embed');
+            
+            appEmbed.addEventListener('load', function() {
+                console.log('Aplicación cargada correctamente');
+            });
+            
+            appEmbed.addEventListener('error', function() {
+                console.error('Error al cargar la aplicación');
+                alert('Error al cargar la aplicación. Por favor, verifica tu conexión a internet.');
+            });
+            
+            // Smooth scroll para anclas
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
